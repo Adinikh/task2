@@ -1,0 +1,26 @@
+Project Name,Student Result Processing System,Browser,Google Chrome
+Written By,Aditya Singh,Description,Test Plan
+Tested By, Aditya Singh,Tested On, 22 January
+
+
+Test_ID,Functionality,Input,Expected_Output,Actual_Output,Test_Report
+T01,isAlphaString,Name=Ravi,TRUE,TRUE,PASS
+T02,isAlphaString,Name=Ravi123,FALSE,FALSE,PASS
+T03,isAlphaNumString,Roll=CS01,TRUE,TRUE,PASS
+T04,isAlphaNumString,Roll=CS@01,FALSE,FALSE,PASS
+T05,isDuplicate,Roll=CS01 Already Exists,TRUE,TRUE,PASS
+T06,isDuplicate,Roll=CS05 Not Exists,FALSE,FALSE,PASS
+T07,readStudents,Valid file stu.txt,TRUE,TRUE,PASS
+T08,readStudents,File not found,FALSE,FALSE,PASS
+T09,readStudents,Marks < 0,FALSE,FALSE,PASS
+T10,readStudents,Marks > 100,FALSE,FALSE,PASS
+T11,calculateGrade,Percentage=92,O Grade, O Grade,PASS
+T12,calculateGrade,Percentage=76,A Grade,A Grade,PASS
+T13,calculateGrade,Percentage=64,B Grade,B Grade,PASS
+T14,calculateGrade,Percentage=48,F Grade,F Grade,PASS
+T15,SubjectWiseFail,One subject < 50,Grade=F,Grade=F,PASS
+T16,CGPA_Calculation,Percentage=85,CGPA=8.5,CGPA=8.5,PASS
+T17,printReport,Valid student list,Formatted Output,Formatted Output,PASS
+T18,writeCSV,Student data,student_results.csv created,student_results.csv created,PASS
+T19,GradeDistribution,Multiple students,Correct count,Correct count,PASS
+T20,OverallSystem,Valid input file,Correct output displayed,Correct output displayed,PASS
